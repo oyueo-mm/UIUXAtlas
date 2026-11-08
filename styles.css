@@ -118,3 +118,5 @@
 @keyframes hero-typewriter{0%,100%{width:1em}45%,82%{width:5em}}
 @keyframes hero-reveal-sheet{0%,100%{transform:translateY(52%)}30%,74%{transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.hero-demo-stage .demo-typewriter .demo-text{width:5em!important}.hero-demo-stage .demo-sheet-expand .sheet-mini,.hero-demo-stage .demo-share-sheet .sheet-card{transform:translateY(0)!important}}
+
+.demo-typewriter .demo-text{display:inline-block;vertical-align:middle}.hero-demo-stage .phone{display:block}
