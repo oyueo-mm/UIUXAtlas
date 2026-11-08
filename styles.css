@@ -153,7 +153,7 @@
 .demo-share-sheet .sheet-card .share-sheet-line:last-child{width:50%;margin-top:6px}
 .hero-demo-stage .demo-share-sheet .sheet-card{animation:hero-reveal-sheet 4.2s ease-in-out infinite}
 .demo-sheet-expand .sheet-mini{height:78%;padding-top:0}
-.demo-sheet-expand .sheet-mini:after{content:"";display:block;height:20px;margin:12px 14px 0;border-radius:5px;background:linear-gradient(to right,#d9e8fb 0 42%,transparent 42% 50%,#d9e8fb 50% 100%)}
+.demo-sheet-expand .sheet-mini:after{content:"";display:block;height:20px;margin:12px 14px 0;border-radius:5px;background:#d9e8fb;width:42%}
 .demo-modal-present .modal-mini{z-index:2}
 .demo-modal-present .modal-dim{position:absolute;inset:0;background:rgba(34,48,71,.15);opacity:0;animation:modal-dim 3.8s ease-in-out infinite}
 @keyframes modal-dim{0%,12%,90%,100%{opacity:0}33%,70%{opacity:1}}
