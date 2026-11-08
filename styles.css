@@ -120,3 +120,41 @@
 @media(prefers-reduced-motion:reduce){.hero-demo-stage .demo-typewriter .demo-text{width:5em!important}.hero-demo-stage .demo-sheet-expand .sheet-mini,.hero-demo-stage .demo-share-sheet .sheet-card{transform:translateY(0)!important}}
 
 .demo-typewriter .demo-text{display:inline-block;vertical-align:middle}.hero-demo-stage .phone{display:block}
+
+/* Independent pages: home is a full canvas, not a banner above the catalog. */
+.home-view{min-height:calc(100dvh - 72px);background:#fff;display:flex;align-items:center;padding:36px clamp(22px,3.3vw,64px)}
+.home-view .hero{width:100%;max-width:1520px;margin:0 auto;padding:0;border:0;border-radius:0;box-shadow:none;background:#fff;min-height:0;grid-template-columns:minmax(230px,.88fr) minmax(430px,1.12fr);gap:clamp(26px,3.8vw,70px);align-items:center}
+.home-view .hero-content{max-width:none}
+.home-view .hero h1{font-size:clamp(33px,3.05vw,53px);line-height:1.36;letter-spacing:-2px}
+.home-view .hero-demo-grid{display:grid!important;visibility:visible!important;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:15px;height:min(490px,70dvh);min-height:370px;align-self:center}
+.home-view .hero-demo-card{height:100%;min-height:0;padding:9px;border-radius:14px;box-shadow:none}
+.home-view .hero-demo-stage{min-height:0;height:100%;display:flex;align-items:stretch}
+.home-view .hero-demo-stage .demo{height:100%;min-height:0}
+.home-view .hero-demo-name{font-size:13px;padding:10px 5px 4px;line-height:1.35}
+.main-content>.library:not([hidden]){padding-top:40px;min-height:calc(100dvh - 72px)}
+.main-content{background:#f9fafc}
+@media(min-width:1450px){.home-view .hero{grid-template-columns:minmax(300px,.86fr) minmax(575px,1.14fr)}.home-view .hero-demo-grid{height:min(540px,72dvh)}}
+@media(min-width:851px) and (max-width:1150px){.home-view{padding:26px}.home-view .hero{grid-template-columns:minmax(180px,.78fr) minmax(0,1.22fr);gap:22px}.home-view .hero h1{font-size:clamp(27px,2.8vw,37px);letter-spacing:-1.2px}.home-view .hero-demo-grid{height:410px;min-height:0;gap:10px}}
+@media(max-width:850px){.home-view{min-height:calc(100dvh - 72px);padding:24px;display:block}.home-view .hero{display:grid;grid-template-columns:1fr;gap:26px;max-width:620px;margin:0 auto;padding:0}.home-view .hero h1{font-size:clamp(26px,4.2vw,36px);letter-spacing:-1.1px}.home-view .hero h1 br{display:block}.home-view .hero-demo-grid{height:auto;min-height:0;grid-template-rows:repeat(2,minmax(155px,1fr))}.home-view .hero-demo-stage .demo{min-height:108px}.main-content>.library:not([hidden]){padding-top:30px}}
+@media(max-width:680px){.home-view{min-height:calc(100dvh - 61px);padding:24px 16px}.home-view .hero{margin:0 auto;padding:0;gap:23px}.home-view .hero h1{font-size:clamp(25px,7vw,32px)}.home-view .hero-demo-grid{gap:10px;grid-template-rows:repeat(2,minmax(156px,1fr))}.home-view .hero-demo-card{padding:7px;border-radius:12px}.home-view .hero-demo-name{font-size:11px;padding:8px 3px 2px}.home-view .hero-demo-category{display:none}.main-content>.library:not([hidden]){padding-top:23px}}
+@media(max-width:380px){.home-view .hero-demo-grid{gap:8px}.home-view .hero-demo-name{font-size:10px}}
+/* An accurate, legible share sheet: an underlying action and a sliding destination panel. */
+.demo-share-sheet .share-invoker{position:absolute;top:12%;left:50%;transform:translateX(-50%);background:white;border:1px solid #e2e8f2;border-radius:9px;color:#3b7cf0;width:36px;height:36px;display:grid;place-items:center}
+.demo-share-sheet .share-invoker .icon{width:18px;height:18px}
+.demo-share-sheet .sheet-card{left:14%;right:14%;bottom:0;height:82%;max-height:132px;padding:10px 10px 9px;border-radius:13px 13px 0 0;animation:sheet-up 4.2s ease-in-out infinite}
+.demo-share-sheet .sheet-card:before{margin:0 auto 7px}
+.demo-share-sheet .share-sheet-caption{display:block;text-align:left;color:#5f6e84;font-size:10px;font-weight:750;margin-bottom:10px}
+.demo-share-sheet .sheet-dots{gap:9px}
+.demo-share-sheet .sheet-dots i{width:24px;height:24px;border-radius:8px}
+.demo-share-sheet .sheet-dots i:nth-child(1){background:#cfe0ff}
+.demo-share-sheet .sheet-dots i:nth-child(2){background:#d7f0e1}
+.demo-share-sheet .sheet-dots i:nth-child(3){background:#f8e6d2}
+.demo-share-sheet .share-sheet-line{display:block;width:76%;height:5px;background:#e7edf6;border-radius:4px;margin:11px auto 0}
+.demo-share-sheet .sheet-card .share-sheet-line:last-child{width:50%;margin-top:6px}
+.hero-demo-stage .demo-share-sheet .sheet-card{animation:hero-reveal-sheet 4.2s ease-in-out infinite}
+.demo-sheet-expand .sheet-mini{height:78%;padding-top:0}
+.demo-sheet-expand .sheet-mini:after{content:"";display:block;height:20px;margin:12px 14px 0;border-radius:5px;background:linear-gradient(to right,#d9e8fb 0 42%,transparent 42% 50%,#d9e8fb 50% 100%)}
+.demo-modal-present .modal-mini{z-index:2}
+.demo-modal-present .modal-dim{position:absolute;inset:0;background:rgba(34,48,71,.15);opacity:0;animation:modal-dim 3.8s ease-in-out infinite}
+@keyframes modal-dim{0%,12%,90%,100%{opacity:0}33%,70%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.demo-modal-present .modal-dim{opacity:.25}}
