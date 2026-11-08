@@ -104,3 +104,17 @@
 @media(max-width:970px){.hero{grid-template-columns:1fr;gap:18px;min-height:0}.hero-content{max-width:none}.hero h1{font-size:27px}.hero h1 br{display:none}.hero-demo-grid{max-width:none}.hero-demo-card{min-height:134px}.hero-demo-stage{min-height:90px}.hero-demo-stage .demo{min-height:90px}}
 @media(max-width:680px){.hero{margin:14px 14px 24px;padding:21px 17px;gap:16px;min-height:0;background:#fff}.hero h1{font-size:24px}.hero h1 br{display:none}.hero-demo-grid{gap:9px}.hero-demo-card{min-height:135px;padding:6px;border-radius:11px}.hero-demo-stage,.hero-demo-stage .demo{min-height:91px}.hero-demo-name{font-size:11px;padding:8px 4px 2px}.hero-demo-name .hero-demo-category{font-size:9px}.hero-demo-stage .demo-text{font-size:16px}}
 @media(max-width:380px){.hero-demo-grid{gap:7px}.hero-demo-name .hero-demo-category{display:none}.hero-demo-stage .phone{transform:scale(.79)}.hero-demo-stage .mini-widget .compare-name{font-size:8px}.hero-demo-stage .ui-pill{font-size:8px;padding:6px}.hero-demo-stage .compare-pair{gap:3px}}
+
+
+/* Keep the requested showcase at the RIGHT on real desktop widths and browser zoom. */
+@media(min-width:851px){.hero{display:grid;grid-template-columns:minmax(180px,42%) minmax(0,1fr);gap:clamp(15px,2vw,38px);align-items:center;min-height:420px;padding:27px 32px}.hero-content{min-width:0;max-width:none}.hero-demo-grid{display:grid!important;visibility:visible!important;grid-template-columns:repeat(2,minmax(0,1fr));align-self:stretch;min-width:0;gap:12px}.hero-demo-card{min-height:148px}.hero h1{font-size:clamp(23px,2.45vw,39px)}}
+@media(min-width:851px) and (max-width:1130px){.hero{grid-template-columns:minmax(170px,40%) minmax(0,1fr);gap:16px;padding:24px}.hero h1{font-size:clamp(21px,2.4vw,31px)}.hero-demo-stage .phone{transform:scale(.82)}}
+@media(min-width:851px) and (max-width:970px){.hero h1 br{display:block}}
+@media(max-width:850px){.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;min-height:0}.hero-demo-grid{display:grid!important;visibility:visible!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%}}
+/* Preview animation starts with visible content, rather than four empty stages. */
+.hero-demo-stage .demo-typewriter .demo-text{animation:hero-typewriter 3.6s steps(5,end) infinite,blink .55s step-end infinite}
+.hero-demo-stage .demo-sheet-expand .sheet-mini{animation:hero-reveal-sheet 4s ease-in-out infinite}
+.hero-demo-stage .demo-share-sheet .sheet-card{animation:hero-reveal-sheet 4.2s ease-in-out infinite}
+@keyframes hero-typewriter{0%,100%{width:1em}45%,82%{width:5em}}
+@keyframes hero-reveal-sheet{0%,100%{transform:translateY(52%)}30%,74%{transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.hero-demo-stage .demo-typewriter .demo-text{width:5em!important}.hero-demo-stage .demo-sheet-expand .sheet-mini,.hero-demo-stage .demo-share-sheet .sheet-card{transform:translateY(0)!important}}
