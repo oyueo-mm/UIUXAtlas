@@ -80,3 +80,27 @@
 @keyframes qr-scan{0%,16%{transform:translateY(11px);opacity:0}30%{opacity:.85}68%{transform:translateY(59px);opacity:.85}82%,100%{transform:translateY(59px);opacity:0}}
 @media(max-width:680px){.hero{margin:14px 14px 24px;padding:22px 18px;min-height:auto;border-radius:13px}.hero h1{font-size:24px;letter-spacing:-.9px}.library-heading h2{font-size:21px}}
 @media(prefers-reduced-motion:reduce){.demo-qr-share .share-demo-icon:after,.demo-dropdown-select .mini-widget:first-child:after{display:none}}
+
+
+/* Homepage: flat white left title + four continuously animated UX cards. */
+.hero{min-height:388px;display:grid;grid-template-columns:minmax(235px,.88fr) minmax(410px,1.12fr);align-items:center;gap:34px;padding:30px 36px;background:#fff}
+.hero-content{width:auto;max-width:460px}
+.hero h1{font-size:clamp(26px,2.8vw,39px);line-height:1.4;letter-spacing:-1.6px}
+.hero-demo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;min-width:0;align-self:stretch}
+.hero-demo-card{display:flex;flex-direction:column;min-width:0;min-height:152px;padding:8px;border:1px solid #e7ecf3;border-radius:13px;background:#fff;text-align:left;color:var(--text);overflow:hidden;transition:border-color .18s,box-shadow .18s,transform .18s}
+.hero-demo-card:hover{border-color:#aec9f8;box-shadow:0 8px 25px #1e3b6b12;transform:translateY(-2px)}
+.hero-demo-card:focus-visible{outline:3px solid #9abffb;outline-offset:2px}
+.hero-demo-stage{display:block;position:relative;flex:1;min-height:99px;overflow:hidden;background:#f5f7fa;border-radius:9px}
+.hero-demo-stage .demo{height:100%;min-height:99px;pointer-events:none}
+.hero-demo-stage .demo-text{font-size:18px}
+.hero-demo-stage .phone{transform:scale(.9)}
+.hero-demo-stage .compare-pair{gap:6px}
+.hero-demo-stage .ui-pill{font-size:9px;padding:7px 8px}
+.hero-demo-stage .mini-widget{gap:7px}
+.hero-demo-stage .mini-widget .compare-name{font-size:9px}
+.hero-demo-name{display:block;padding:10px 5px 2px;font-weight:800;font-size:12px;letter-spacing:-.3px}
+.hero-demo-name .hero-demo-category{float:right;font-weight:600;font-size:10px;color:#98a3b4;letter-spacing:0}
+@media(max-width:1130px){.hero{grid-template-columns:minmax(190px,.75fr) minmax(350px,1.25fr);gap:22px;padding:23px 25px;min-height:350px}.hero h1{font-size:clamp(24px,2.5vw,32px)}.hero-demo-grid{gap:9px}.hero-demo-card{min-height:140px}}
+@media(max-width:970px){.hero{grid-template-columns:1fr;gap:18px;min-height:0}.hero-content{max-width:none}.hero h1{font-size:27px}.hero h1 br{display:none}.hero-demo-grid{max-width:none}.hero-demo-card{min-height:134px}.hero-demo-stage{min-height:90px}.hero-demo-stage .demo{min-height:90px}}
+@media(max-width:680px){.hero{margin:14px 14px 24px;padding:21px 17px;gap:16px;min-height:0;background:#fff}.hero h1{font-size:24px}.hero h1 br{display:none}.hero-demo-grid{gap:9px}.hero-demo-card{min-height:135px;padding:6px;border-radius:11px}.hero-demo-stage,.hero-demo-stage .demo{min-height:91px}.hero-demo-name{font-size:11px;padding:8px 4px 2px}.hero-demo-name .hero-demo-category{font-size:9px}.hero-demo-stage .demo-text{font-size:16px}}
+@media(max-width:380px){.hero-demo-grid{gap:7px}.hero-demo-name .hero-demo-category{display:none}.hero-demo-stage .phone{transform:scale(.79)}.hero-demo-stage .mini-widget .compare-name{font-size:8px}.hero-demo-stage .ui-pill{font-size:8px;padding:6px}.hero-demo-stage .compare-pair{gap:3px}}
