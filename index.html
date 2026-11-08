@@ -34,33 +34,29 @@
 <div class="side-separator"></div>
 <div class="side-caption">내 라이브러리</div>
 <button type="button" class="side-item" id="favoriteNav" data-category="favorites"><span class="icon" data-icon="heart"></span><span>즐겨찾기</span><span class="side-count" id="favoriteCount">0</span></button>
-<div class="side-bottom"><div class="side-tip-icon"><span class="icon" data-icon="sparkles"></span></div><strong>보고, 누르고, 이해하기</strong><p>카드를 누르면 각 UI/UX 기법을 자세히 체험할 수 있어요.</p><span>UIUXAtlas · 2026</span></div>
+
 </div>
 </aside>
 <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
 <main class="main-content" id="main">
 <section class="hero" aria-labelledby="heroTitle">
 <div class="hero-content">
-<div class="eyebrow"><span class="pulse-dot"></span> INTERACTIVE UI / UX LIBRARY</div>
-<h1 id="heroTitle">움직임으로 이해하는<br><em>UI / UX 디자인.</em></h1>
-<p>어떤 이름인지 몰랐던 인터페이스의 움직임과 차이.<br class="desktop-break"> 직접 보고, 눌러보고, 비교하며 익혀보세요.</p>
-<div class="hero-meta"><div><strong>36</strong><span>수록 기법</span></div><div class="meta-divider"></div><div><strong>04</strong><span>카테고리</span></div><div class="meta-divider"></div><div><strong>∞</strong><span>실시간 체험</span></div></div>
+<h1 id="heroTitle">움직임으로 이해하는 <em>UI / UX 디자인.</em></h1>
 </div>
-<div class="hero-art" aria-hidden="true"><div class="art-window"><div class="art-dots"><i></i><i></i><i></i></div><div class="art-ui"><div class="art-top"><span></span><span></span></div><div class="art-line large"></div><div class="art-line medium"></div><div class="art-pills"><i></i><i></i><i></i></div><div class="art-floating"><span class="art-check">✓</span><span>Interaction complete</span></div></div></div><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div></div>
 </section>
 <section class="library" id="library" aria-labelledby="libraryTitle">
-<div class="library-heading"><div><div class="section-eyebrow">EXPLORE THE ATLAS</div><h2 id="libraryTitle">기법 도감 <span class="result-count" id="resultCount">36</span></h2><p id="sectionDescription">상황별 UI/UX 기법을 직접 탐색해 보세요.</p></div><div class="library-actions"><label class="auto-toggle"><input type="checkbox" id="autoPlay" checked><span class="toggle-track"><span class="toggle-thumb"></span></span><span>자동 재생</span></label></div></div>
+<div class="library-heading"><div><h2 id="libraryTitle">기법 도감 <span class="result-count" id="resultCount">36</span></h2></div><div class="library-actions"><label class="auto-toggle"><input type="checkbox" id="autoPlay" checked><span class="toggle-track"><span class="toggle-thumb"></span></span><span>자동 재생</span></label></div></div>
 <div class="filters"><div class="search-field"><span class="icon" data-icon="search"></span><input id="searchInput" type="search" placeholder="기법 이름 또는 키워드 검색" autocomplete="off" aria-label="도감 검색"><kbd>/</kbd></div><div class="filter-controls"><label for="sortSelect" class="sr-only">정렬</label><select id="sortSelect"><option value="default">기본 순서</option><option value="name">이름순</option></select></div></div>
 <div class="category-chips" id="categoryChips" aria-label="카테고리 필터"><button class="chip active" type="button" data-category="all">전체 <span>36</span></button><button class="chip" type="button" data-category="text">텍스트 효과</button><button class="chip" type="button" data-category="transition">화면 전환</button><button class="chip" type="button" data-category="compare">UI 비교</button><button class="chip" type="button" data-category="share">공유 패턴</button></div>
 <div class="card-grid" id="cardGrid" aria-live="polite"></div>
 <div class="empty-state" id="emptyState" hidden><div class="empty-icon"><span class="icon" data-icon="search"></span></div><h3>일치하는 기법이 없어요</h3><p>다른 검색어나 카테고리로 다시 찾아보세요.</p><button type="button" id="clearFilters">전체 도감 보기</button></div>
 </section>
-<footer class="footer"><span><span class="footer-dot"></span> UIUXAtlas v1.0</span><span>관찰하는 것에서, 직접 경험하는 것으로.</span><a href="https://github.com/oyueo-mm/UIUXAtlas" target="_blank" rel="noopener noreferrer">오픈소스 프로젝트 <span class="icon tiny" data-icon="arrow-up-right"></span></a></footer>
+<footer class="footer"><span><span class="footer-dot"></span> UIUXAtlas v1.0</span><a href="https://github.com/oyueo-mm/UIUXAtlas" target="_blank" rel="noopener noreferrer">오픈소스 프로젝트 <span class="icon tiny" data-icon="arrow-up-right"></span></a></footer>
 </main>
 </div>
 <div class="detail-backdrop" id="detailBackdrop" hidden></div>
 <aside class="detail-drawer" id="detailDrawer" role="dialog" aria-modal="true" aria-labelledby="detailTitle" aria-hidden="true">
-<div class="drawer-top"><span class="drawer-label">INTERACTION DETAIL</span><button class="icon-button" id="closeDetail" type="button" aria-label="상세 창 닫기"><span class="icon" data-icon="x"></span></button></div>
+<div class="drawer-top"><span class="drawer-label">기법 상세</span><button class="icon-button" id="closeDetail" type="button" aria-label="상세 창 닫기"><span class="icon" data-icon="x"></span></button></div>
 <div class="drawer-content" id="detailContent"></div>
 </aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
