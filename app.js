@@ -66,7 +66,7 @@ case "highlight":inside='<span class="demo-text"><span class="highlight-word">�
 case "word-rotate":inside='<div class="rotate-stack"><div><p>오늘은 <span class="accent">기획</span></p><p>오늘은 <span class="accent">디자인</span></p><p>오늘은 <span class="accent">개발</span></p></div></div>';break;
 case "blur-in":inside='<span class="demo-text">지금 집중</span>';break;
 case "push":inside=phone(listUnits()+phoneScreen(true));break;
-case "modal-present":inside=phone(listUnits()+'<div class="modal-mini"></div>');break;
+case "modal-present":inside=phone(listUnits()+'<div class="modal-dim"></div><div class="modal-mini"></div>');break;
 case "fade-through":inside=phone(listUnits()+phoneScreen(true));break;
 case "shared-element":inside=phone(listUnits()+'<div class="floating-blue"></div>');break;
 case "card-expand":inside=phone(listUnits()+'<div class="floating-card"></div>');break;
@@ -91,7 +91,7 @@ case "copy-link":inside='<div class="share-demo-icon dark">'+icon("link")+'</div
 case "repost":inside='<div class="share-demo-icon dark">'+icon("repeat")+'</div>';break;
 case "qr-share":inside='<div class="share-demo-icon" style="width:75px;height:75px">'+sampleQR()+'</div>';break;
 case "nearby-share":inside='<div class="nearby-rings"></div><div class="share-demo-icon dark" style="z-index:1">'+icon("smartphone")+'</div>';break;
-case "share-sheet":inside='<div style="position:absolute;top:24px;color:#b6c4d5">'+icon("share")+'</div><div class="sheet-card"><div class="sheet-dots"><i></i><i></i><i></i></div></div>';break;
+case "share-sheet":inside='<div class="share-invoker">'+icon("share")+'</div><div class="sheet-card"><span class="share-sheet-caption">공유하기</span><div class="sheet-dots"><i></i><i></i><i></i></div><i class="share-sheet-line"></i><i class="share-sheet-line"></i></div>';break;
 }
 return '<div class="demo demo-'+id+'" data-demo="'+id+'">'+inside+'</div>';}
 function updateCounts(){document.getElementById("favoriteCount").textContent=state.favorites.size;document.getElementById("navTotal").textContent=CATALOG.length;}
