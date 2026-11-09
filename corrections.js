@@ -1,4 +1,12 @@
 "use strict";
+/* Avoid presenting fixed numeric percentages while an animated meter is at a different value. */
+EXTRA_DEMOS["progress-circle"]=EXTRA_DEMOS["progress-circle"].replace("<span>75%</span>","<span>진행</span>");
+EXTRA_DEMOS["upload-progress"]=EXTRA_DEMOS["upload-progress"].replace("<b>75%</b>","<b>업로드 중</b>");
+MORE_DEMOS["donut-fill"]=MORE_DEMOS["donut-fill"].replace("<span>72%</span>","<span>진행</span>");
+MORE_DEMOS["radial-gauge"]=MORE_DEMOS["radial-gauge"].replace("<span>75%</span>","<span>진행</span>");
+MORE_DEMOS["media-scrubber"]=MORE_DEMOS["media-scrubber"].replace("00:15 ─ 01:00","재생 위치 이동");
+MORE_CONTROLS["reorder-layout"]='<button type="button" data-exp-action="dashboard-reorder">위젯 순서 변경</button>';
+
 EXTRA_CONTROLS["list-reorder"]='<button type="button" data-exp-action="reorder">첫째·둘째 항목 순서 바꾸기</button>';
 EXTRA_CONTROLS["arrow-key-tabs"]='<div class="demo-keyboard-tabs" role="tablist" aria-label="키보드 탭 체험"><button type="button" role="tab" data-demo-tab aria-selected="true" tabindex="0">개요</button><button type="button" role="tab" data-demo-tab aria-selected="false" tabindex="-1">상세</button><button type="button" role="tab" data-demo-tab aria-selected="false" tabindex="-1">설정</button></div><p class="demo-tab-panel" role="tabpanel">개요 탭이 선택되었습니다. 방향키 또는 마우스로 다른 탭을 선택하세요.</p>';
 EXTRA_CONTROLS["skip-navigation"]='<a href="#skip-demo-target" class="demo-skip-link" data-demo-skip>본문 바로가기</a><p id="skip-demo-target" tabindex="-1" class="demo-skip-target">이곳이 본문 시작 위치입니다.</p>';
@@ -10,4 +18,4 @@ extraHandleAction=function(button){if(button.dataset.expAction==="reorder"){cons
 const _baseExtraInput=extraHandleInput;
 extraHandleInput=function(input){_baseExtraInput(input);if(input.dataset.expInput==="range"){const value=extraStage()?.querySelector(".x-label b");if(value)value.style.display="inline";}};
 const _baseMoreAction=moreHandleAction;
-moreHandleAction=function(button,stage){if(button.dataset.expAction==="flip-swap"){const root=stage.querySelector(".y-gridmove");if(!root||root.children.length<2)return;const tiles=[...root.children];tiles.forEach(extraStop);const before=tiles.map(el=>el.getBoundingClientRect());root.insertBefore(tiles[1],tiles[0]);tiles.forEach((el,i)=>{const after=el.getBoundingClientRect(),old=before[i];el.animate([{transform:"translate("+(old.left-after.left)+"px,"+(old.top-after.top)+"px)"},{transform:"translate(0,0)"}],{duration:500,easing:"cubic-bezier(.2,.7,.2,1)"});});extraNote("요소들의 실제 DOM 위치를 바꾸고 FLIP으로 부드럽게 보간했습니다.");return;}_baseMoreAction(button,stage);};
+moreHandleAction=function(button,stage){if(button.dataset.expAction==="dashboard-reorder"){const root=stage.querySelector(".y-dashboard");if(!root)return;const children=[...root.children],before=children.map(el=>el.getBoundingClientRect());children.forEach(extraStop);root.insertBefore(children[1],children[0]);children.forEach((el,i)=>{const after=el.getBoundingClientRect(),old=before[i];el.animate([{transform:"translate("+(old.left-after.left)+"px,"+(old.top-after.top)+"px)"},{transform:"translate(0,0)"}],{duration:550,easing:"ease-in-out"});});extraNote("위젯의 실제 배치 순서를 변경했습니다.");return;}if(button.dataset.expAction==="flip-swap"){const root=stage.querySelector(".y-gridmove");if(!root||root.children.length<2)return;const tiles=[...root.children];tiles.forEach(extraStop);const before=tiles.map(el=>el.getBoundingClientRect());root.insertBefore(tiles[1],tiles[0]);tiles.forEach((el,i)=>{const after=el.getBoundingClientRect(),old=before[i];el.animate([{transform:"translate("+(old.left-after.left)+"px,"+(old.top-after.top)+"px)"},{transform:"translate(0,0)"}],{duration:500,easing:"cubic-bezier(.2,.7,.2,1)"});});extraNote("요소들의 실제 DOM 위치를 바꾸고 FLIP으로 부드럽게 보간했습니다.");return;}_baseMoreAction(button,stage);};
