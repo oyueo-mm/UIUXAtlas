@@ -60,3 +60,8 @@
 .exp-progress-circle .x-circleprogress>span,.y-donut-fill .y-donut>span,.y-radial-gauge .y-gauge>span{font-size:11px;white-space:nowrap}
 @keyframes atlas-cart-count{0%,30%,100%{opacity:0;transform:scale(.45)}61%,84%{opacity:1;transform:scale(1)}}
 .y-cart-add-motion .y-carticon i{animation:atlas-cart-count 4.2s ease-in-out infinite}
+
+
+/* Keep the complete painted path visible in compact cards; scale dot and SVG together. */
+.hero-demo-stage .y-path-follow .y-path{transform:scale(.83);transform-origin:center center}
+@media(max-width:680px){.hero-demo-stage .y-path-follow .y-path{transform:scale(.72)}.pattern-card .y-path-follow .y-path{transform:scale(.86);transform-origin:center center}}
