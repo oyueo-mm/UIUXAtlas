@@ -386,3 +386,18 @@
 .exp-contrast-modes .x-contrast b,.exp-contrast-modes .x-contrast small{animation:x-contrast-foreground 4s ease-in-out infinite}
 @keyframes x-contrast-foreground{0%,20%,100%{color:#9da9b9}35%,76%{color:#fff}}
 @media(max-width:680px){.exp-controls{gap:7px}.exp-controls label input:not([type=checkbox]):not([type=radio]):not([type=range]){max-width:160px}.exp-demo{padding:5px;font-size:10px}.exp-demo .x-stack{width:min(150px,94%)}.exp-demo .x-input{height:30px;padding:0 6px}.exp-demo .x-table{width:150px;font-size:9px}.exp-demo .x-pages{gap:3px}.exp-demo .x-pages span{min-width:18px}.exp-demo .x-label,.exp-demo .x-caption{font-size:9px}}
+
+
+/* Audited semantic-motion corrections: progress, visibility and shared context. */
+@keyframes x-indeterminate-pass{0%{transform:translateX(-100%)}100%{transform:translateX(275%)}}
+.exp-bar-indeterminate .x-indeterminate i{animation:x-indeterminate-pass 2.1s linear infinite}
+.exp-password-eye .x-password{position:relative;min-width:80px;min-height:17px;display:inline-flex;align-items:center;animation:none}
+.exp-password-eye .x-pass-dots,.exp-password-eye .x-pass-clear{position:absolute;left:0;top:0;white-space:nowrap;display:block}
+.exp-password-eye .x-pass-dots{letter-spacing:2px;animation:x-pass-hide 4s ease-in-out infinite}
+.exp-password-eye .x-pass-clear{letter-spacing:0;opacity:0;animation:x-pass-show 4s ease-in-out infinite}
+@keyframes x-pass-hide{0%,20%,90%,100%{opacity:1}35%,74%{opacity:0}}
+@keyframes x-pass-show{0%,20%,90%,100%{opacity:0}35%,74%{opacity:1}}
+.exp-reduced-motion-option .x-reduced{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;justify-items:center}
+.exp-reduced-motion-option .x-reduced>span:first-child{animation:x-bounce 2.6s ease-in-out infinite}
+.exp-reduced-motion-option .x-reduced>span.y-still{color:#8394ab;animation:none}
+.exp-reduced-motion-option .x-reduced>small{grid-column:1/-1}
