@@ -158,3 +158,18 @@
 .demo-modal-present .modal-dim{position:absolute;inset:0;background:rgba(34,48,71,.15);opacity:0;animation:modal-dim 3.8s ease-in-out infinite}
 @keyframes modal-dim{0%,12%,90%,100%{opacity:0}33%,70%{opacity:1}}
 @media(prefers-reduced-motion:reduce){.demo-modal-present .modal-dim{opacity:.25}}
+
+
+/* Motion correctness pass — text animation follows intrinsic glyph width and seamless word cycles. */
+.demo-typewriter .demo-text,.hero-demo-stage .demo-typewriter .demo-text{display:inline-block;box-sizing:content-box;vertical-align:middle;white-space:nowrap;overflow:hidden;letter-spacing:0;width:0;border-right:2px solid #397ff2;animation:typing-accurate 3.6s steps(var(--typing-steps,4),end) infinite,blink .58s step-end infinite}
+@keyframes typing-accurate{0%,11%{width:0}53%,78%{width:var(--typing-width,4em)}92%,100%{width:0}}
+.demo-word-rotate .word-cycle{display:inline-flex;gap:8px;align-items:center;justify-content:center;white-space:nowrap;font-size:21px;font-weight:850}
+.demo-word-rotate .word-cycle-prefix{line-height:32px}
+.demo-word-rotate .rotate-stack{height:32px;line-height:32px;overflow:hidden;display:inline-block}
+.demo-word-rotate .rotate-stack>div{animation:word-cycle-seamless 6.4s cubic-bezier(.3,.01,.25,1) infinite}
+.demo-word-rotate .rotate-stack p{font-size:21px;line-height:32px;height:32px;font-weight:850;white-space:nowrap;margin:0;text-align:left;color:#397ff2}
+@keyframes word-cycle-seamless{0%,22%{transform:translateY(0)}29%,48%{transform:translateY(-32px)}55%,74%{transform:translateY(-64px)}81%,100%{transform:translateY(-96px)}}
+.motion-paused .demo-typewriter .demo-text,.motion-paused .hero-demo-stage .demo-typewriter .demo-text{animation:none!important;width:var(--typing-width,4em)!important;border-right-color:transparent!important}
+.motion-paused .demo-word-rotate .rotate-stack>div{animation:none!important;transform:translateY(0)!important}
+@media(prefers-reduced-motion:reduce){.demo-typewriter .demo-text,.hero-demo-stage .demo-typewriter .demo-text{animation:none!important;width:var(--typing-width,4em)!important;border-right-color:transparent!important}.demo-word-rotate .rotate-stack>div{animation:none!important;transform:translateY(0)!important}}
+@media(max-width:680px){.demo-word-rotate .word-cycle{font-size:17px}.demo-word-rotate .word-cycle-prefix{font-size:17px}.demo-word-rotate .rotate-stack p{font-size:17px}}
