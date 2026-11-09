@@ -30,3 +30,27 @@
 .motion-paused .exp-range-slider .x-fill,.motion-paused .exp-range-slider .x-knob{animation:none!important}
 .motion-paused .exp-scroll-snap .x-snap-track,.motion-paused .exp-list-reorder .x-reorder>div,.motion-paused .y-before-after-slider .y-before-right,.motion-paused .y-before-after-slider .y-before-handle,.motion-paused .y-media-scrubber .y-timeline i,.motion-paused .y-media-scrubber .y-timeline b,.motion-paused .y-flip-layout .y-gridmove i{animation:none!important;transform:none!important}
 @media(prefers-reduced-motion:reduce){.exp-scroll-snap .x-snap-track,.exp-list-reorder .x-reorder>div,.y-before-after-slider .y-before-right,.y-before-after-slider .y-before-handle,.y-media-scrubber .y-timeline i,.y-media-scrubber .y-timeline b,.y-flip-layout .y-gridmove i{animation:none!important;transform:none!important}}
+
+
+/* Geometry-synchronized motion path: the visible SVG and offset-path share identical 190x105 coordinates. */
+.y-path-follow .y-path{position:relative;display:block;width:190px;height:105px;flex:none;overflow:visible}
+.y-path-follow .y-path svg{position:absolute;inset:0;width:190px;height:105px;max-width:none;overflow:visible;display:block}
+.y-path-follow .y-path .y-route{fill:none;stroke:#79a8e9;stroke-width:2.8;stroke-linecap:round;stroke-dasharray:5 5}
+.y-path-follow .y-route-start{fill:#34a58a;stroke:#fff;stroke-width:1.5}
+.y-path-follow .y-route-finish{fill:#ec8c66;stroke:#fff;stroke-width:1.5}
+.y-path-follow .y-path .y-path-dot{display:block;position:absolute;top:0;left:0;width:16px;height:16px;border-radius:50%;background:#2c7df2;box-shadow:0 0 0 4px #dceafe,0 2px 6px #254b8250;offset-anchor:center center;offset-position:0 0;offset-distance:0%;offset-rotate:0deg;animation:atlas-follow-curve 5s ease-in-out infinite}
+@keyframes atlas-follow-curve{0%,8%{offset-distance:0%}45%,55%{offset-distance:100%}92%,100%{offset-distance:0%}}
+/* A marquee loops by exactly one repeated text block including its trailing gap. */
+.y-text-marquee .y-marquee>div{gap:0}
+.y-text-marquee .y-marquee>div span{padding-right:40px}
+/* The dragged file moves into the drop zone, rather than flying away from it. */
+.exp-drag-drop-zone .x-dropzone .x-floating-file{animation:atlas-drop-in 4.1s ease-in-out infinite;left:50%}
+@keyframes atlas-drop-in{0%,13%,100%{transform:translate(-50%,-22px);opacity:.85}44%,74%{transform:translate(-50%,53px);opacity:1}87%{transform:translate(-50%,53px);opacity:.4}}
+/* Pull to refresh moves list content DOWN before returning, preserving touch semantics. */
+.exp-pull-to-refresh .x-phoneclip .x-lines{animation:atlas-pull-down 4.4s ease-in-out infinite}
+.exp-pull-to-refresh .x-phoneclip .x-refresh{animation:atlas-refresh-turn 4.4s ease-in-out infinite}
+@keyframes atlas-pull-down{0%,10%,100%{transform:translateY(0)}30%,46%{transform:translateY(27px)}73%,88%{transform:translateY(0)}}
+@keyframes atlas-refresh-turn{0%,10%{transform:translateY(-20px) rotate(0);opacity:0}30%{transform:translateY(0) rotate(0);opacity:1}65%{transform:translateY(0) rotate(360deg);opacity:1}82%,100%{transform:translateY(-20px) rotate(360deg);opacity:0}}
+/* Reduce/disallow animation without freezing a moving item off its path. */
+.motion-paused .y-path-follow .y-path-dot{animation:none!important;offset-distance:50%!important}
+@media(prefers-reduced-motion:reduce){.y-path-follow .y-path-dot{animation:none!important;offset-distance:50%!important}.exp-drag-drop-zone .x-floating-file,.exp-pull-to-refresh .x-refresh,.exp-pull-to-refresh .x-lines{animation:none!important}}
