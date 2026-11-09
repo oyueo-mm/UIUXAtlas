@@ -1,0 +1,370 @@
+
+/* Expanded atlas v1.1: 108 purpose-built component previews, all flat-colored. */
+.exp-demo{position:relative;display:flex;align-items:center;justify-content:center;padding:8px;color:#273245;font-size:11px;font-weight:650;line-height:1.45;width:100%;height:100%;background:#f5f7fa;overflow:hidden;isolation:isolate}
+.exp-demo *{box-sizing:border-box}
+.exp-demo .x-center,.exp-demo .x-stack{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;position:relative;max-width:100%;width:100%}
+.exp-demo .x-stack{align-items:stretch;width:min(185px,92%);gap:5px}
+.exp-demo .x-caption{font-weight:700;color:#7b8798;font-size:10px;line-height:1.3;text-align:center}
+.exp-demo .x-label{font-size:10px;font-weight:700;color:#798599}
+.exp-demo .x-stage{position:relative;width:min(205px,96%);height:105px;overflow:hidden}
+.exp-demo .x-relative{position:relative}
+.exp-demo .x-input{position:relative;display:flex;justify-content:space-between;align-items:center;width:100%;height:32px;background:white;border:1px solid #dae2ed;border-radius:7px;padding:0 9px;font-weight:650;color:#4f5d72;white-space:nowrap;overflow:hidden}
+.exp-demo .x-input.x-invalid{border-color:#ee8d91;color:#9a4652}
+.exp-demo .x-error{color:#d45a66;font-size:9px;font-weight:700}
+.exp-demo .x-ok,.exp-demo .x-valid{color:#26a479;font-weight:900}
+.exp-demo .x-ghostline{height:9px;background:#e2e8f0;border-radius:7px;margin:14px auto;width:78%}
+.exp-demo .x-ghostline.short{width:53%}
+.exp-demo .x-toast,.exp-demo .x-snackbar{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);white-space:nowrap;border-radius:9px;background:#233148;color:#fff;padding:11px 13px;box-shadow:0 8px 22px #344a6e26;font-size:10px;font-weight:750;display:flex;align-items:center;gap:6px}
+.exp-demo .x-snackbar{bottom:5px;font-size:10px}.exp-demo .x-snackbar b{color:#9dc4ff;margin-left:5px}
+.exp-demo .x-success{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:#d7f4e7;color:#1c9d65;font-size:29px}
+.exp-demo .x-steps{display:flex;align-items:center;justify-content:center;gap:24px}
+.exp-demo .x-steps i{font-style:normal;font-size:11px;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#e2e8f1;color:#778398;position:relative}
+.exp-demo .x-steps i:not(:last-child):after{content:"";position:absolute;width:18px;height:2px;background:#d2dded;left:34px}
+.exp-demo .x-steps .x-done,.exp-demo .x-steps .x-progress{background:#4d8af5;color:#fff}
+.exp-demo .x-bell{position:relative;display:grid;place-items:center;width:49px;height:49px;border-radius:13px;background:white;border:1px solid #e1e9f4;font-size:29px;color:#5795f5}
+.exp-demo .x-notice{position:absolute;top:-8px;right:-8px;min-width:22px;height:22px;border-radius:14px;background:#ef657c;color:#fff;display:grid;place-items:center;font-style:normal;font-size:10px}
+.exp-demo .x-status{background:#e0f5e9;color:#247e57;padding:10px;border-radius:8px;text-align:center;font-size:10px}
+.exp-demo .x-like{font-size:22px;color:#f26588;font-weight:850}
+.exp-demo .x-like span{color:#627086;font-size:14px}
+.exp-demo .x-toggle,.exp-demo .x-springtoggle{width:67px;height:35px;border-radius:22px;background:#cfd8e5;display:inline-flex;align-items:center;padding:4px}
+.exp-demo .x-toggle i,.exp-demo .x-springtoggle i{display:block;background:#fff;border-radius:50%;height:27px;width:27px;box-shadow:0 2px 5px #273c6227}
+.exp-demo .x-options{display:grid;gap:9px;min-width:125px;color:#607088}
+.exp-demo .x-options>span{display:flex;align-items:center;gap:8px;font-size:11px}
+.exp-demo .x-radio,.exp-demo .x-check{width:16px;height:16px;border:2px solid #aab7c9;display:grid;place-items:center;font-size:10px;color:#fff;font-style:normal}
+.exp-demo .x-radio{border-radius:50%}
+.exp-demo .x-check{border-radius:4px}
+.exp-demo .x-track{width:165px;max-width:100%;height:7px;border-radius:9px;background:#dbe4f2;position:relative}
+.exp-demo .x-track .x-fill,.exp-demo .x-uploadbar{display:block;height:100%;background:#4d8af5;border-radius:9px;width:60%}
+.exp-demo .x-knob{position:absolute;top:50%;left:60%;width:20px;height:20px;background:#fff;border:4px solid #4d8af5;border-radius:50%;transform:translate(-50%,-50%)}
+.exp-demo .x-segments{position:relative;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;background:#e5ebf4;border-radius:9px;padding:4px;width:190px;height:42px}
+.exp-demo .x-segments>span{z-index:1;text-align:center;font-size:10px}
+.exp-demo .x-segments .x-choice-active{position:absolute;width:31%;left:3%;top:4px;bottom:4px;background:#fff;border-radius:7px;box-shadow:0 2px 8px #344c6f18}
+.exp-demo .x-eye{color:#6594df}.exp-demo .x-password{font-size:12px;letter-spacing:2px}
+.exp-demo .x-otp{display:flex;gap:5px}.exp-demo .x-otp i{height:28px;width:21px;border-radius:6px;border:1px solid #cfdaea;background:#fff;display:grid;place-items:center;font-style:normal;font-size:12px;color:#4978ce}
+.exp-demo .x-otp i.x-motion{border-color:#3e80ef}
+.exp-demo .x-suggestions{position:absolute;top:34px;left:0;right:0;background:white;border:1px solid #dce7f4;box-shadow:0 10px 18px #293e6414;border-radius:7px;z-index:3;overflow:hidden}
+.exp-demo .x-suggestions span{display:block;padding:7px 9px;color:#536f9c;font-size:10px}
+.exp-demo .x-suggestions span:first-child{background:#edf3ff}
+.exp-demo .x-valid-text{color:#2ba66c;font-size:9px}
+.exp-demo .x-breadcrumb{display:flex;align-items:center;gap:7px;white-space:nowrap;color:#8795a8;font-size:10px}
+.exp-demo .x-breadcrumb b{color:#3d82ef}.exp-demo .x-breadcrumb i{font-style:normal;color:#c1cbda}
+.exp-demo .x-minipage,.exp-demo .x-phoneclip,.exp-demo .x-scrollscreen{position:relative;width:115px;height:106px;border-radius:10px;border:1px solid #dde5ef;background:#fff;overflow:hidden;padding:8px}
+.exp-demo .x-topstrip{height:25px;border-bottom:1px solid #e6edf6;color:#6685b5;font-size:9px;padding:2px}
+.exp-demo .x-drawer{position:absolute;z-index:2;inset:0 auto 0 0;width:76%;padding:13px;background:#fff;box-shadow:4px 0 15px #233e6526;font-size:10px;line-height:1.9}
+.exp-demo .x-drawer hr,.exp-demo .x-command hr{border:0;height:1px;background:#e3eaf4}
+.exp-demo .x-mega{position:absolute;left:4%;right:4%;top:27px;display:flex;gap:12px;justify-content:center;background:#fff;border:1px solid #dfe7f1;box-shadow:0 7px 18px #233e651b;border-radius:6px;padding:10px 5px;font-size:10px}
+.exp-demo .x-mega small{color:#9ba7b9;font-size:8px}
+.exp-demo .x-pages{display:flex;gap:5px;align-items:center}.exp-demo .x-pages span{min-width:23px;height:25px;background:#fff;border:1px solid #e2e9f3;border-radius:6px;display:grid;place-items:center;font-size:11px}.exp-demo .x-pages .x-page-selected{background:#3c82f4;color:#fff}
+.exp-demo .x-layout{display:flex;gap:8px;width:160px;height:100px;background:white;border:1px solid #e4ebf3;border-radius:8px;padding:10px}
+.exp-demo .x-tableofcontents{width:50px;display:grid;align-content:start;gap:8px;font-size:9px;color:#8c9aae}
+.exp-demo .x-tableofcontents i{font-style:normal}
+.exp-demo .x-tableofcontents .x-motion{color:#347ff5;border-left:2px solid #347ff5;padding-left:4px}
+.exp-demo .x-lines{display:grid;align-content:start;gap:9px;flex:1}
+.exp-demo .x-lines i{display:block;width:100%;height:7px;border-radius:5px;background:#e4eaf2}
+.exp-demo .x-lines i:nth-child(2){width:76%}.exp-demo .x-lines i:nth-child(3){width:92%}
+.exp-demo .x-bottomnav{position:absolute;bottom:0;left:0;right:0;height:29px;border-top:1px solid #e5ecf4;display:flex;align-items:center;justify-content:space-around;color:#9caec4;font-size:17px}
+.exp-demo .x-bottomnav .x-motion{color:#3d83f2}
+.exp-demo .x-command{width:170px;background:white;border:1px solid #d9e4f1;border-radius:10px;padding:12px;box-shadow:0 10px 25px #263d5f1a;font-size:10px;color:#70829b}
+.exp-demo .x-command>div{color:#4a7dcb;font-weight:800}
+.exp-demo .x-command>span{display:block;padding:5px}.exp-demo .x-menu-trigger{position:absolute;top:16px;right:24px;border:1px solid #dbe3f0;background:white;padding:3px 10px;border-radius:7px}
+.exp-demo .x-popup{position:absolute;top:34px;right:25px;background:white;border:1px solid #d9e4f2;box-shadow:0 6px 18px #263d5f1b;border-radius:7px;padding:9px 12px;line-height:2.1;color:#5c6a80}
+.exp-demo .x-swipe{width:175px;height:46px;position:relative;background:#f08b98;overflow:hidden;border-radius:7px}
+.exp-demo .x-swipe-action{position:absolute;right:8px;top:15px;color:white}
+.exp-demo .x-swipe-item{position:absolute;inset:0;background:white;border:1px solid #e3e9f2;padding:15px 9px;white-space:nowrap;font-size:10px}
+.exp-demo .x-dropzone{position:relative;width:168px;height:87px;border:2px dashed #91b6ef;background:#eff5ff;border-radius:10px;display:grid;place-content:center;text-align:center;gap:7px;font-size:10px;color:#4682d5}
+.exp-demo .x-floating-file{position:absolute;left:48%;top:-14px;font-size:24px;color:#4386ee}
+.exp-demo .x-refresh{font-size:22px;color:#3c80e9;text-align:center}
+.exp-demo .x-phoneclip .x-lines{margin-top:7px}
+.exp-demo .x-presshold{background:#3e83f2;color:white;padding:12px 15px;border-radius:9px;font-size:10px}
+.exp-demo .x-holdmenu{position:absolute;top:76%;background:#fff;border:1px solid #dbe4f0;box-shadow:0 7px 16px #263a5e20;border-radius:7px;padding:7px;white-space:nowrap;font-size:9px}
+.exp-demo .x-picture{width:78px;height:68px;border-radius:9px;background:#dbeafb;color:#3e80da;display:grid;place-items:center;font-size:33px}
+.exp-demo .x-fingers{color:#93abc8;font-size:13px}
+.exp-demo .x-carousel,.exp-demo .x-gallery,.exp-demo .x-snap{width:185px;height:93px;overflow:hidden;position:relative}
+.exp-demo .x-carousel-track,.exp-demo .x-gallery-inner,.exp-demo .x-snap-track{display:flex;gap:9px;width:max-content}
+.exp-demo .x-carousel-track i,.exp-demo .x-gallery-inner i,.exp-demo .x-snap-track i{font-style:normal;width:95px;height:81px;border-radius:8px;background:#d4e5fc;color:#4e83cc;display:grid;place-items:center;font-size:17px}
+.exp-demo .x-carousel-track i:nth-child(2),.exp-demo .x-gallery-inner i:nth-child(2){background:#d9f2e7}
+.exp-demo .x-reorder{display:grid;gap:5px;width:160px}.exp-demo .x-reorder div{background:white;border:1px solid #e1e8f2;border-radius:5px;padding:7px 9px;font-size:10px}
+.exp-demo .x-dismiss{padding:12px;background:white;border:1px solid #dae5f1;border-radius:8px;white-space:nowrap;font-size:10px}
+.exp-demo .x-photo{position:relative;width:120px;height:88px;border-radius:9px;background:#d7e9ff;display:grid;place-items:center;color:#fff}
+.exp-demo .x-photo>span:last-child{position:absolute;bottom:8px;color:#6594cc;font-size:9px}.exp-demo .x-heartburst{font-size:40px;color:#fa6588}
+.exp-demo .x-parallax{height:104px;width:170px;position:relative;overflow:hidden;border-radius:8px;background:#dfedfd}
+.exp-demo .x-cloud{position:absolute;width:48px;height:13px;border-radius:15px;background:white;top:16px;left:26px}
+.exp-demo .x-mountain{position:absolute;bottom:0;left:12px;width:130px;height:65px;background:#a6cbf2;clip-path:polygon(0 100%,38% 10%,65% 65%,82% 35%,100% 100%)}
+.exp-demo .x-foreground{position:absolute;bottom:-5px;left:0;right:0;height:27px;background:#82b2e0;border-radius:50% 50% 0 0}
+.exp-demo .x-scrollscreen{width:145px}
+.exp-demo .x-stickyhead{position:relative;z-index:2;background:#d5e8ff;padding:5px;border-radius:4px;color:#3c78bf;font-size:10px}
+.exp-demo .x-scrollinglines{display:grid;gap:10px;margin-top:8px}
+.exp-demo .x-scrollinglines i{height:7px;background:#e2e9f1;border-radius:4px}
+.exp-demo .x-infinite{width:135px;height:100px;position:relative;overflow:hidden}
+.exp-demo .x-feedrows{display:grid;gap:6px}
+.exp-demo .x-feedrows i{height:21px;background:white;border-radius:5px;border:1px solid #e4eaf2}
+.exp-demo .x-infinite span{position:absolute;bottom:0;left:0;right:0;background:#edf4fe;color:#5383be;text-align:center;font-size:9px}
+.exp-demo .x-reading{width:160px;height:92px;background:white;border-radius:6px;overflow:hidden;padding:0 9px 8px}
+.exp-demo .x-readbar{width:calc(100% + 18px);margin:0 -9px 16px;height:4px;background:#e0eafa}.exp-demo .x-readbar i{display:block;height:100%;width:10%;background:#4087f4}
+.exp-demo .x-gallery-inner i{width:64px;height:84px}
+.exp-demo .x-reveal-list{display:grid;gap:5px;width:160px}
+.exp-demo .x-reveal-list i{height:26px;background:white;border:1px solid #e2eaf5;border-radius:7px}
+.exp-demo .x-snap{height:105px}
+.exp-demo .x-snap-track i{width:160px;height:80px}
+.exp-demo .x-snap>span{position:absolute;bottom:0;left:0;right:0;text-align:center;color:#5789d9;font-size:9px}
+.exp-demo .x-backtop{position:absolute;bottom:6px;right:8px;width:33px;height:33px;border-radius:50%;background:#4288f3;display:grid;place-items:center;color:white;font-size:20px}
+.exp-demo .x-anchor{display:flex;width:130px;height:100px;border-radius:8px;background:white;overflow:hidden}
+.exp-demo .x-mini-sidebar{width:46px;padding:8px 4px;line-height:2.1;color:#8596af;font-size:9px}
+.exp-demo .x-mini-sidebar b{color:#3d85eb}
+.exp-demo .x-anchor-content{width:80px;line-height:1.6;text-align:center;color:#4d8bc3;font-size:15px}
+.exp-demo .x-spinner{display:block;width:46px;height:46px;border:5px solid #d9e7fb;border-top-color:#397fed;border-radius:50%}
+.exp-demo .x-three-dots{display:flex;gap:7px}.exp-demo .x-three-dots i{width:13px;height:13px;border-radius:50%;background:#4a89ed}
+.exp-demo .x-skeletonlist{display:grid;gap:9px;width:160px}.exp-demo .x-skeletonlist>div{display:flex;align-items:center;gap:9px}
+.exp-demo .x-skeletonlist i{width:26px;height:26px;border-radius:7px;background:#dfe7f2}
+.exp-demo .x-skeletonlist span{flex:1;height:11px;border-radius:5px;background:#dfe7f2}
+.exp-demo .x-shimmerbox{width:153px;height:80px;background:#e0e7f1;border-radius:8px;overflow:hidden;position:relative;padding:12px}
+.exp-demo .x-shimmerbox span{position:absolute;inset:0 auto 0 0;width:27%;background:#fff;opacity:.6}
+.exp-demo .x-shimmerbox i{display:block;height:10px;background:#d4deeb;border-radius:4px;margin:15px 0}
+.exp-demo .x-pulse{display:flex;flex-direction:column;gap:9px;width:150px;background:#e4ebf4;border-radius:8px;padding:12px}
+.exp-demo .x-pulse i{width:35px;height:35px;background:#ccd9e9;border-radius:8px}
+.exp-demo .x-pulse b{height:8px;width:90%;background:#ccd9e9;border-radius:5px}
+.exp-demo .x-pulse b:last-child{width:60%}
+.exp-demo .x-orbit{width:58px;height:58px;border-radius:50%;border:1px solid #d9e4f5;position:relative}
+.exp-demo .x-orbit i{position:absolute;left:21px;top:-7px;width:15px;height:15px;background:#4989ee;border-radius:50%}
+.exp-demo .x-indeterminate{width:165px;height:7px;background:#e2eaf5;border-radius:10px;overflow:hidden}
+.exp-demo .x-indeterminate i{display:block;width:40%;height:100%;background:#4787f0;border-radius:10px}
+.exp-demo .x-circleprogress{position:relative;width:81px;height:81px;display:grid;place-items:center}
+.exp-demo .x-circleprogress svg{width:81px;height:81px;position:absolute;inset:0;transform:rotate(-90deg)}
+.exp-demo .x-circleprogress svg circle{fill:none;stroke:#dce8f6;stroke-width:6}
+.exp-demo .x-circleprogress svg .x-motion{stroke:#4386ec;stroke-linecap:round;stroke-dasharray:157;stroke-dashoffset:39}
+.exp-demo .x-circleprogress span{font-size:14px;color:#4882df}
+.exp-demo .x-file-label{display:flex;justify-content:space-between;font-size:10px;color:#586b81}
+.exp-demo .x-file-label b{color:#3879ee}
+.exp-demo .x-card,.exp-demo .x-selectcard,.exp-demo .x-tile{width:125px;height:91px;border:1px solid #dbe6f4;border-radius:10px;background:white;box-shadow:0 5px 15px #27496b13;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;padding:10px;text-align:center}
+.exp-demo .x-card i{width:75px;height:7px;background:#e4eaf2;border-radius:5px}
+.exp-demo .x-tilt{background:#e7f0ff;color:#367aea}
+.exp-demo .x-flip{position:relative;width:126px;height:86px;transform-style:preserve-3d}
+.exp-demo .x-flip-front,.exp-demo .x-flip-back{position:absolute;inset:0;border-radius:9px;display:grid;place-items:center;backface-visibility:hidden;background:#d9e8ff;color:#407cd5}
+.exp-demo .x-flip-back{background:#d8f4e3;color:#2b9263;transform:rotateY(180deg)}
+.exp-demo .x-accordion{width:177px;min-height:41px;background:white;border:1px solid #dce7f4;border-radius:8px;overflow:hidden}
+.exp-demo .x-accordion>div{padding:11px;font-size:10px}
+.exp-demo .x-accordion p{font-size:10px;color:#8a97a7;margin:0;padding:0 11px 10px}
+.exp-demo .x-imagecard{width:140px;height:92px;border-radius:9px;background:#c7dffb;display:grid;place-items:center;position:relative;overflow:hidden;color:#6395ce}
+.exp-demo .x-imagecard i{font-style:normal;font-size:36px}
+.exp-demo .x-imagecard span{position:absolute;inset:0;background:#2f466a99;color:#fff;display:grid;place-items:center}
+.exp-demo .x-cardstack,.exp-demo .x-deck{position:relative;width:140px;height:98px;display:grid;place-items:center}
+.exp-demo .x-cardstack i,.exp-demo .x-deck i{position:absolute;width:100px;height:74px;border-radius:9px;background:#c3d9f3;transform:rotate(-12deg);border:1px solid white}
+.exp-demo .x-cardstack i:nth-child(2){transform:rotate(10deg);background:#d7e6f9}
+.exp-demo .x-cardstack div,.exp-demo .x-deck div{position:relative;width:102px;height:74px;border-radius:9px;background:white;border:1px solid #d9e4f1;display:grid;place-items:center;box-shadow:0 6px 13px #233d5d20}
+.exp-demo .x-deck i{transform:rotate(9deg);background:#d5e3f7}
+.exp-demo .x-selectcard{align-items:stretch;width:145px;gap:5px}
+.exp-demo .x-selectcard span{color:#4e637c}
+.exp-demo .x-selectcard b{color:#3075e5;font-size:15px}
+.exp-demo .x-selectcard i{position:absolute;right:14px;top:10px;font-style:normal;color:#347fe7}
+.exp-demo .x-tile{width:90px;height:90px;background:#e3f0ff}
+.exp-demo .x-tile b{font-size:28px;color:#4387e4}
+.exp-demo .x-help,.exp-demo .x-mini-btn{background:#fff;border:1px solid #dbe6f1;color:#447ed1;border-radius:7px;padding:8px 14px;font-size:10px}
+.exp-demo .x-tooltip,.exp-demo .x-popover{position:absolute;bottom:70%;background:#24344d;color:white;padding:8px 10px;border-radius:6px;white-space:nowrap;box-shadow:0 6px 16px #192d4a26;font-size:10px}
+.exp-demo .x-popover{bottom:auto;top:58%;background:white;color:#354867;border:1px solid #e0e7ef;display:flex;flex-direction:column;gap:5px;width:115px}
+.exp-demo .x-popover small{color:#8393a7}
+.exp-demo .x-dim{position:absolute;inset:0;background:#34476526;opacity:.7}
+.exp-demo .x-dialog{position:absolute;z-index:2;top:25%;left:15%;right:15%;height:68px;display:grid;place-items:center;background:#fff;box-shadow:0 6px 20px #2c48652a;border-radius:10px}
+.exp-demo .x-dialog small{color:#97a4b5}.exp-demo .x-dialog small span{color:#337eea}
+.exp-demo .x-sidedrawer{position:absolute;right:0;top:0;bottom:0;width:49%;padding:12px;background:#fff;box-shadow:-5px 0 18px #263e601e;display:grid;align-content:start;gap:9px}
+.exp-demo .x-sidedrawer>span{color:#8a98aa}.exp-demo .x-sidedrawer i{height:12px;background:#dfe9f7;border-radius:5px}
+.exp-demo .x-bottomsheet{position:absolute;bottom:0;left:5%;right:5%;height:80%;background:white;border-radius:11px 11px 0 0;box-shadow:0 -5px 15px #2940611c;padding:7px 12px;display:flex;flex-direction:column;gap:8px}
+.exp-demo .x-bottomsheet i{width:26px;height:3px;background:#d6e1ee;border-radius:4px;margin:0 auto}
+.exp-demo .x-bottomsheet small{line-height:2;color:#71849c}
+.exp-demo .x-spotlight{position:relative;width:160px;height:99px;background:#3a4863;border-radius:9px;display:grid;place-items:center;color:white}
+.exp-demo .x-spot{background:#fff;color:#3979ed;border-radius:7px;padding:9px}
+.exp-demo .x-spotlight>span{position:absolute;top:5px;right:7px;font-size:8px}
+.exp-demo .x-toasts{position:relative;width:140px;height:99px}
+.exp-demo .x-toasts div{position:absolute;left:9px;right:9px;top:8px;padding:10px;background:white;color:#3b806a;border:1px solid #dce7f1;border-radius:7px;box-shadow:0 5px 11px #29436819}
+.exp-demo .x-toasts div:nth-child(2){top:31px}.exp-demo .x-toasts div:nth-child(3){top:54px}
+.exp-demo .x-lightbox{width:170px;height:100px;background:#253750d4;border-radius:7px;display:grid;place-items:center}
+.exp-demo .x-lightbox div{background:#b4d3fb;width:90px;height:67px;border-radius:6px;display:grid;place-items:center;font-size:31px;color:#fff}
+.exp-demo .x-table{position:relative;width:180px;min-height:100px;background:#fff;border:1px solid #dce5f2;border-radius:7px;overflow:hidden;color:#69798e;font-size:10px}
+.exp-demo .x-table>div{padding:7px 9px;border-bottom:1px solid #edf1f6;white-space:nowrap}
+.exp-demo .x-table .x-th{font-weight:800;background:#e4eeff;color:#3a79d7}
+.exp-demo .x-filterheader{background:#eff4fb;text-align:right}
+.exp-demo .x-filterheader span{border-radius:4px;background:white;padding:3px 7px}
+.exp-demo .x-rowdetail{background:#eaf4ff;color:#4b7dc1}
+.exp-demo .x-tablescroll{height:98px}
+.exp-demo .x-tablescroll .x-th{position:relative;z-index:1}
+.exp-demo .x-tablemove div{padding:7px;border-bottom:1px solid #e8edf5}
+.exp-demo .x-resizecol{background:#e5efff;color:#3e76ce;width:68%;display:flex;justify-content:space-between}
+.exp-demo .x-editcell{display:inline-block;padding:3px 5px;border:1px solid #3f82f4;color:#377be1;border-radius:3px}
+.exp-demo .x-selectbox{display:inline-grid;place-items:center;width:12px;height:12px;background:#e1eafa;border-radius:3px;font-size:9px;font-style:normal;color:#fff}
+.exp-demo .x-density>div{padding:8px}
+.exp-demo .x-nodata{font-size:34px;color:#85a6d8}
+.exp-demo .x-chiplist{display:flex;gap:5px;flex-wrap:wrap;width:160px}
+.exp-demo .x-chiplist span{border-radius:20px;background:#fff;border:1px solid #dce7f2;padding:7px 9px;color:#6781a3;font-size:9px}
+.exp-demo .x-chiplist span:first-child{background:#e1edff;color:#3479de}
+.exp-demo .x-tree{background:#fff;padding:10px 16px;border:1px solid #dce7f3;border-radius:8px;font-size:10px;line-height:2;color:#67788d}
+.exp-demo .x-tree .x-motion{color:#387ee9}
+.exp-demo .x-calendar{background:white;width:160px;border:1px solid #e1e9f3;border-radius:8px;padding:10px;font-size:10px;text-align:center}
+.exp-demo .x-dates{display:flex;justify-content:space-around;gap:3px;margin-top:13px}
+.exp-demo .x-dates span{width:18px;height:20px;display:grid;place-items:center}
+.exp-demo .x-dates .x-motion{background:#4888ee;color:white;border-radius:5px}
+.exp-demo .x-timewheel{display:flex;align-items:center;gap:8px;font-size:19px}
+.exp-demo .x-timewheel span{color:#bac6d6;font-size:11px}
+.exp-demo .x-timewheel b{color:#4184ec}
+.exp-demo .x-timewheel i{font-style:normal;color:#899ab0}
+.exp-demo .x-stars{font-size:23px;color:#edb947;white-space:nowrap}
+.exp-demo .x-stars i{font-style:normal;display:inline-block}
+.exp-demo .x-colors{display:flex;gap:8px}
+.exp-demo .x-colors i{width:24px;height:24px;border-radius:50%;background:#397ef1;position:relative}
+.exp-demo .x-colors i:nth-child(2){background:#25a678}
+.exp-demo .x-colors i:nth-child(3){background:#e18a44}
+.exp-demo .x-colors i:nth-child(4){background:#bc78df}
+.exp-demo .x-colors i:nth-child(5){background:#384658}
+.exp-demo .x-fileicon{font-size:23px}
+.exp-demo .x-ripplebtn,.exp-demo .x-magnetic,.exp-demo .x-depthbtn{position:relative;background:#4787ee;color:white;display:grid;place-items:center;padding:11px 18px;border-radius:8px;font-size:11px;font-weight:800;overflow:hidden}
+.exp-demo .x-ripplebtn i{position:absolute;width:20px;height:20px;border:2px solid #c8dffd;border-radius:50%;left:50%;top:50%;margin:-10px}
+.exp-demo .x-morph{position:relative;width:38px;height:32px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.exp-demo .x-morph i{display:block;width:100%;height:3px;background:#4486ec;border-radius:3px}
+.exp-demo .x-ping{position:relative;width:22px;height:22px}
+.exp-demo .x-ping b,.exp-demo .x-ping i{position:absolute;inset:0;border-radius:50%;background:#5b96f5}
+.exp-demo .x-ping i{background:#9bc2fc}
+.exp-demo .x-confetti{position:relative;display:grid;place-items:center;width:120px;height:90px}
+.exp-demo .x-confetti b{color:#4384ea}
+.exp-demo .x-confetti i{position:absolute;top:48%;left:49%;font-size:15px;color:#e7aa43;font-style:normal}
+.exp-demo .x-confetti i:nth-child(3){color:#4b97e6}.exp-demo .x-confetti i:nth-child(4){color:#46ac81}.exp-demo .x-confetti i:nth-child(5){color:#ed7c92}
+.exp-demo .x-heart{font-size:48px;color:#ed6990}
+.exp-demo .x-likepop{background:#e5f0ff;border-radius:9px;padding:9px 13px;color:#ef658b;font-size:22px}
+.exp-demo .x-likepop b{font-size:11px;color:#657994}
+.exp-demo .x-depthbtn{box-shadow:0 6px 0 #2b5db9}
+.exp-demo .x-springtoggle{background:#d8e4f3}
+.exp-demo .x-focusbtn{border:2px solid #3f82f4;background:white;box-shadow:0 0 0 4px #bed7ff;border-radius:7px;padding:11px;color:#4377c3}
+.exp-demo .x-skiplink{position:absolute;top:0;left:5px;z-index:2;background:#397eed;color:white;padding:5px;border-radius:0 0 6px 6px;font-size:8px}
+.exp-demo .x-contrast{padding:15px;background:#d9e3f0;border-radius:9px;display:grid;gap:8px}
+.exp-demo .x-contrast b{color:#9da9b9}.exp-demo .x-contrast small{color:#a8b4c4}
+.exp-demo .x-reduced{display:grid;justify-items:center;gap:8px}
+.exp-demo .x-reduced>span{color:#3c83eb;font-size:19px}
+.exp-demo .x-reduced small{color:#72859b}
+.exp-demo .x-live{background:#e1f5e9;color:#247f50;padding:10px;border-radius:8px;font-size:10px}
+.exp-demo .x-keytabs{display:flex;gap:3px;background:#e7edf4;border-radius:8px;padding:4px}
+.exp-demo .x-keytabs span{padding:7px 8px;border-radius:6px;font-size:9px}
+.exp-demo .x-keytabs .x-motion{color:#3d7ede;background:white}
+.exp-demo .x-target{width:64px;height:64px;border:2px dashed #9cc0f5;border-radius:13px;display:grid;place-items:center}
+.exp-demo .x-target span{width:33px;height:33px;border-radius:9px;background:#e1edff;display:grid;place-items:center;color:#4d8be5;font-size:22px}
+/* Shared fallback motion keeps animation measurable and visibly alive even in compact cards. */
+.exp-demo .x-motion{animation:x-breathe 3.7s ease-in-out infinite}
+@keyframes x-breathe{0%,100%{opacity:.7;transform:scale(.97)}45%,70%{opacity:1;transform:scale(1)}}
+@keyframes x-appear{0%,18%,90%,100%{opacity:0;transform:translateY(13px)}36%,77%{opacity:1;transform:translateY(0)}}
+@keyframes x-left{0%,15%,95%,100%{transform:translateX(0)}35%,67%{transform:translateX(-63px)}}
+@keyframes x-right{0%,15%,95%,100%{transform:translateX(-100%)}32%,73%{transform:translateX(0)}}
+@keyframes x-down{0%,15%,95%,100%{transform:translateY(-90%)}33%,75%{transform:translateY(0)}}
+@keyframes x-up{0%,15%,95%,100%{transform:translateY(90%)}33%,75%{transform:translateY(0)}}
+@keyframes x-wiggle{0%,24%,100%{transform:translateX(0)}29%,39%,49%{transform:translateX(-5px)}34%,44%,54%{transform:translateX(5px)}}
+@keyframes x-pulse{0%,100%{transform:scale(1);opacity:.7}40%,70%{transform:scale(1.18);opacity:1}}
+@keyframes x-grow{0%,14%,95%,100%{transform:scale(.35);opacity:.25}37%,73%{transform:scale(1);opacity:1}}
+@keyframes x-rotate{to{transform:rotate(360deg)}}
+@keyframes x-flip{0%,18%,90%,100%{transform:rotateY(0)}43%,74%{transform:rotateY(180deg)}}
+@keyframes x-tilt{0%,100%{transform:rotateY(-9deg) rotateX(8deg)}50%{transform:rotateY(11deg) rotateX(-6deg)}}
+@keyframes x-switch{0%,19%,87%,100%{background:#cfd8e5}36%,73%{background:#4788f1}}
+@keyframes x-thumb{0%,19%,87%,100%{transform:translateX(0)}36%,73%{transform:translateX(31px)}}
+@keyframes x-check{0%,21%,90%,100%{background:white;border-color:#aab7c9;color:transparent}38%,77%{background:#4788f1;border-color:#4788f1;color:white}}
+@keyframes x-fill{0%,16%,94%,100%{width:16%}38%,75%{width:75%}}
+@keyframes x-knob{0%,16%,94%,100%{left:16%}38%,75%{left:75%}}
+@keyframes x-slide-tabs{0%,20%,100%{transform:translateX(0)}38%,72%{transform:translateX(102%)}}
+@keyframes x-pop{0%,20%,90%,100%{opacity:0;transform:scale(.5)}40%,72%{opacity:1;transform:scale(1)}}
+@keyframes x-scrolly{0%,12%,100%{transform:translateY(0)}60%,75%{transform:translateY(-72px)}}
+@keyframes x-scrollx{0%,13%,100%{transform:translateX(0)}55%,74%{transform:translateX(-105px)}}
+@keyframes x-shimmer{0%,100%{transform:translateX(-120%)}60%{transform:translateX(420%)}}
+@keyframes x-nod{0%,18%,100%{transform:translateY(0)}35%,63%{transform:translateY(-6px)}}
+@keyframes x-glow{0%,20%,100%{box-shadow:0 0 0 0 #bad5fd}43%,70%{box-shadow:0 0 0 5px #bad5fd}}
+@keyframes x-bounce{0%,16%,100%{transform:translateY(0)}31%,55%{transform:translateY(-12px)}43%,67%{transform:translateY(-4px)}}
+@keyframes x-fly{0%,20%,100%{transform:translate(0,0) rotate(0);opacity:1}47%,72%{transform:translate(16px,-26px) rotate(16deg);opacity:.1}}
+@keyframes x-expand{0%,18%,95%,100%{width:65px;height:55px}43%,70%{width:145px;height:94px}}
+@keyframes x-stagger{0%,15%,100%{transform:translateY(11px);opacity:0}42%,75%{transform:translateY(0);opacity:1}}
+@keyframes x-splash{0%,15%,100%{opacity:0;transform:scale(.2)}38%,70%{opacity:1;transform:scale(2.2)}}
+@keyframes x-bars{0%,18%,100%{height:18%}40%,71%{height:80%}}
+@keyframes x-fold{0%,16%,100%{max-height:40px}38%,73%{max-height:105px}}
+@keyframes x-squish{0%,20%,100%{transform:translateY(0);box-shadow:0 6px 0 #2b5db9}36%,68%{transform:translateY(5px);box-shadow:0 1px 0 #2b5db9}}
+@keyframes x-highlight{0%,20%,100%{background:#e9edf4;color:#9fa9b5}35%,76%{background:#1e293b;color:white}}
+@keyframes x-focus{0%,22%,100%{outline:3px solid transparent;outline-offset:2px}39%,75%{outline:3px solid #4288ed;outline-offset:2px}}
+@keyframes x-rotateicon{0%,20%,100%{transform:rotate(0)}40%,72%{transform:rotate(90deg)}}
+@keyframes x-spring{0%,16%,100%{transform:translateX(0)}38%{transform:translateX(31px)}45%{transform:translateX(25px)}55%,75%{transform:translateX(29px)}}
+/* Individually appropriate motion mappings. */
+.exp-toast-notification .x-toast,.exp-snackbar-undo .x-snackbar,.exp-status-banner .x-status,.exp-success-state .x-success,.exp-inline-error .x-error,.exp-form-validation .x-valid-text,.exp-combo-input .x-suggestions,.exp-autocomplete-input .x-suggestions,.exp-tooltip-help .x-tooltip,.exp-popover-detail .x-popover,.exp-context-popup .x-popup,.exp-contextual-menu .x-popup,.exp-skip-navigation .x-skiplink,.exp-toast-stack .x-toasts .x-motion{animation:x-appear 4s ease-in-out infinite}
+.exp-error-shake .x-input,.exp-error-association .x-input{animation:x-wiggle 4s ease-in-out infinite}
+.exp-progress-feedback .x-progress,.exp-badge-counter .x-notice,.exp-notification-ping .x-ping i,.exp-heart-beat .x-heart,.exp-like-pop .x-likepop,.exp-touch-target-area .x-target{animation:x-pulse 3.8s ease-in-out infinite}
+.exp-optimistic-update .x-like{animation:x-pop 3.8s ease-in-out infinite}
+.exp-switch-toggle .x-toggle{animation:x-switch 3.8s ease-in-out infinite}
+.exp-switch-toggle .x-toggle i{animation:x-thumb 3.8s ease-in-out infinite}
+.exp-radio-choice .x-radio.x-motion,.exp-checkbox-select .x-check.x-motion,.exp-multiselect-list .x-check.x-motion,.exp-bulk-selection .x-selectbox.x-motion{animation:x-check 3.8s ease-in-out infinite}
+.exp-range-slider .x-fill{animation:x-fill 4s ease-in-out infinite}
+.exp-range-slider .x-knob{animation:x-knob 4s ease-in-out infinite}
+.exp-segmented-picker .x-choice-active{animation:x-slide-tabs 4s ease-in-out infinite}
+.exp-password-eye .x-password{animation:x-highlight 4s ease-in-out infinite;border-radius:4px}
+.exp-otp-code .x-otp i.x-motion,.exp-form-validation .x-valid{animation:x-pop 3.7s ease-in-out infinite}
+.exp-breadcrumb-trail .x-breadcrumb b,.exp-section-spy .x-tableofcontents .x-motion,.exp-bottom-navigation .x-bottomnav .x-motion,.exp-filter-chip .x-chiplist .x-motion,.exp-date-calendar .x-dates .x-motion,.exp-keyboard-tabs .x-keytabs .x-motion{animation:x-glow 4s ease-in-out infinite}
+.exp-navigation-drawer .x-drawer,.exp-side-drawer .x-sidedrawer{animation:x-right 4.2s ease-in-out infinite}
+.exp-mega-nav .x-mega,.exp-command-search .x-command,.exp-modal-confirm .x-dialog{animation:x-pop 4s ease-in-out infinite}
+.exp-wizard-steps .x-progress,.exp-pagination-controls .x-page-selected{animation:x-bounce 3.9s ease-in-out infinite}
+.exp-swipe-reveal .x-swipe-item,.exp-swipe-dismiss .x-dismiss,.exp-swipe-deck .x-deck .x-motion{animation:x-left 4s ease-in-out infinite}
+.exp-drag-drop-zone .x-floating-file{animation:x-fly 4s ease-in-out infinite}
+.exp-drag-drop-zone .x-dropzone,.exp-file-dropzone .x-dropzone{animation:x-glow 4s ease-in-out infinite}
+.exp-pull-to-refresh .x-refresh{animation:x-rotate 2s linear infinite}
+.exp-pull-to-refresh .x-phoneclip .x-lines{animation:x-up 4s ease-in-out infinite}
+.exp-long-press-menu .x-holdmenu{animation:x-appear 4s ease-in-out infinite}
+.exp-long-press-menu .x-presshold{animation:x-squish 4s ease-in-out infinite;box-shadow:0 6px 0 #2b5db9}
+.exp-pinch-to-zoom .x-picture{animation:x-grow 4s ease-in-out infinite}
+.exp-carousel-swipe .x-carousel-track,.exp-horizontal-gallery .x-gallery-inner,.exp-scroll-snap .x-snap-track{animation:x-scrollx 4.3s ease-in-out infinite}
+.exp-list-reorder .x-reorder .x-motion{animation:x-nod 4s ease-in-out infinite}
+.exp-double-tap-like .x-heartburst{animation:x-pop 3.6s ease-in-out infinite}
+.exp-parallax-layers .x-cloud{animation:x-scrollx 6s linear infinite}
+.exp-parallax-layers .x-mountain{animation:x-nod 5s ease-in-out infinite}
+.exp-parallax-layers .x-foreground{animation:x-nod 4s ease-in-out infinite}
+.exp-sticky-title .x-scrollinglines,.exp-infinite-feed .x-feedrows,.exp-sticky-header-table .x-tablemove,.exp-anchor-scroll .x-anchor-content{animation:x-scrolly 4s ease-in-out infinite}
+.exp-reading-progress .x-readbar i,.exp-upload-progress .x-uploadbar{animation:x-fill 4s ease-in-out infinite}
+.exp-viewport-reveal .x-reveal-list i{animation:x-stagger 4s ease-in-out infinite}
+.exp-viewport-reveal .x-reveal-list i:nth-child(2){animation-delay:.15s}.exp-viewport-reveal .x-reveal-list i:nth-child(3){animation-delay:.3s}
+.exp-floating-top .x-backtop{animation:x-bounce 4s ease-in-out infinite}
+.exp-spinner-ring .x-spinner,.exp-orbit-loader .x-orbit{animation:x-rotate 1.4s linear infinite}
+.exp-loading-dots .x-three-dots i{animation:x-bounce 1.25s ease-in-out infinite}
+.exp-loading-dots .x-three-dots i:nth-child(2){animation-delay:.15s}.exp-loading-dots .x-three-dots i:nth-child(3){animation-delay:.3s}
+.exp-skeleton-list .x-skeletonlist div{animation:x-breathe 2.1s ease-in-out infinite}
+.exp-skeleton-list .x-skeletonlist div:nth-child(2){animation-delay:.2s}.exp-skeleton-list .x-skeletonlist div:nth-child(3){animation-delay:.4s}
+.exp-shimmer-skeleton .x-shimmerbox span{animation:x-shimmer 2.6s linear infinite}
+.exp-pulse-placeholder .x-pulse{animation:x-breathe 2.5s ease-in-out infinite}
+.exp-bar-indeterminate .x-indeterminate i{animation:x-scrollx 2.1s ease-in-out infinite}
+.exp-progress-circle svg circle.x-motion{animation:x-ring-fill 4s ease-in-out infinite}
+@keyframes x-ring-fill{0%,13%,100%{stroke-dashoffset:157}43%,77%{stroke-dashoffset:39}}
+.exp-hover-elevate .x-card{animation:x-bounce 4s ease-in-out infinite}
+.exp-flip-details .x-flip{animation:x-flip 4.8s ease-in-out infinite}
+.exp-tilt-3d .x-card{animation:x-tilt 4.5s ease-in-out infinite}
+.exp-accordion-card .x-accordion{animation:x-fold 4s ease-in-out infinite;max-height:40px}
+.exp-image-overlay .x-imagecard span{animation:x-appear 4s ease-in-out infinite}
+.exp-stacked-cards .x-cardstack .x-motion{animation:x-nod 4s ease-in-out infinite}
+.exp-selectable-card .x-selectcard{animation:x-glow 4s ease-in-out infinite}
+.exp-expanding-tile .x-tile{animation:x-expand 4s ease-in-out infinite}
+.exp-modal-confirm .x-dim,.exp-side-drawer .x-dim{animation:x-breathe 4s ease-in-out infinite}
+.exp-bottom-actions .x-bottomsheet{animation:x-up 4s ease-in-out infinite}
+.exp-spotlight-overlay .x-spotlight>span{animation:x-appear 4s ease-in-out infinite}
+.exp-spotlight-overlay .x-spot{animation:x-glow 4s ease-in-out infinite}
+.exp-lightbox-photo .x-lightbox>div{animation:x-grow 4s ease-in-out infinite}
+.exp-sortable-columns .x-th b,.exp-filterable-table .x-trow.x-motion,.exp-expanding-row .x-rowdetail,.exp-resizable-columns .x-resizecol,.exp-editable-cell .x-editcell{animation:x-highlight 4s ease-in-out infinite}
+.exp-bulk-selection .x-selectbox.x-motion{font-size:9px}
+.exp-density-mode .x-density{animation:x-density 4s ease-in-out infinite}
+@keyframes x-density{0%,20%,100%{font-size:10px;line-height:1.45}40%,75%{font-size:9px;line-height:1}}
+.exp-empty-results .x-nodata{animation:x-nod 4s ease-in-out infinite}
+.exp-tree-picker .x-tree .x-motion{animation:x-highlight 4s ease-in-out infinite}
+.exp-time-wheel .x-timewheel span.x-motion{animation:x-up 4s ease-in-out infinite}
+.exp-star-rating .x-stars i.x-motion{animation:x-bounce 4s ease-in-out infinite}
+.exp-star-rating .x-stars i:nth-child(2){animation-delay:.13s}.exp-star-rating .x-stars i:nth-child(3){animation-delay:.26s}.exp-star-rating .x-stars i:nth-child(4){animation-delay:.39s}
+.exp-palette-picker .x-colors .x-motion{animation:x-glow 4s ease-in-out infinite}
+.exp-ripple-tap .x-ripplebtn i{animation:x-splash 2.9s ease-out infinite}
+.exp-magnetic-target .x-magnetic{animation:x-nod 3.6s ease-in-out infinite}
+.exp-icon-morph .x-morph{animation:x-rotateicon 4s ease-in-out infinite}
+.exp-notification-ping .x-ping i{animation:x-splash 2.6s ease-in-out infinite}
+.exp-confetti-burst .x-confetti i{animation:x-fly 3.6s ease-in-out infinite}
+.exp-confetti-burst .x-confetti i:nth-child(3){animation-delay:.12s;animation-direction:reverse}
+.exp-confetti-burst .x-confetti i:nth-child(4){animation-delay:.24s}
+.exp-confetti-burst .x-confetti i:nth-child(5){animation-delay:.36s;animation-direction:reverse}
+.exp-depth-press .x-depthbtn{animation:x-squish 3.7s ease-in-out infinite}
+.exp-toggle-spring .x-springtoggle i{animation:x-spring 3.7s ease-in-out infinite}
+.exp-focus-visible-ring .x-focusbtn{animation:x-focus 3.8s ease-in-out infinite}
+.exp-contrast-modes .x-contrast{animation:x-highlight 4s ease-in-out infinite}
+.exp-reduced-motion-option .x-reduced span{animation:x-breathe 4.2s ease-in-out infinite}
+.exp-aria-live-update .x-live{animation:x-appear 4s ease-in-out infinite}
+.exp-error-association .x-error{animation:x-appear 4s ease-in-out infinite}
+.exp-visible-label .x-label{animation:x-nod 4s ease-in-out infinite}
+/* respect accessibility preferences while leaving UI states identifiable */
+@media(prefers-reduced-motion:reduce){.exp-demo *,.exp-demo *:before,.exp-demo *:after{animation-duration:.01ms!important;animation-iteration-count:1!important}.exp-demo .x-motion{opacity:1}}
