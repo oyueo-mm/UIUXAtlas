@@ -242,7 +242,6 @@
 .z-header-on-scroll .z-scroll-top{animation:z-hide-header 4.5s ease-in-out infinite}
 .z-header-on-scroll .z-scroll-lines{animation:z-scroll-rows 4.5s ease-in-out infinite}
 @keyframes z-scroll-stats{0%,17%,100%{transform:translateY(0)}41%,75%{transform:translateY(-76px)}}
-.z-scroll-counter .z-scroll-count>div{animation:none}
 .z-scroll-counter .z-scroll-count{animation:none}
 .z-scroll-counter .z-counter-intro{animation:z-scroll-stats 4s ease-in-out infinite}
 .z-scroll-counter .z-counter-target{animation:z-scroll-stats 4s ease-in-out infinite}
