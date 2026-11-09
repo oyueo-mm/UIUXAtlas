@@ -21,19 +21,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check JavaScript syntax
-        run: node --check app.js && node --check expansion-data.js && node --check expansion-demos.js && node --check expansion-controls.js && node --check more-data.js && node --check more-demos.js && node --check more-controls.js
+        run: node --check app.js && node --check expansion-data.js && node --check expansion-demos.js && node --check expansion-controls.js && node --check more-data.js && node --check more-demos.js && node --check more-controls.js && node --check corrections.js
       - name: Verify 216 UI/UX catalog entries
         run: node tests/check-expansion.cjs
       - name: Verify catalog completeness
         run: node -e "const fs=require('fs');const s=fs.readFileSync('app.js','utf8');const ids=[...s.matchAll(/pattern\(\"([^\"]+)\"/g)].map(x=>x[1]);const cases=[...s.matchAll(/case \"([^\"]+)\":inside=/g)].map(x=>x[1]);if(ids.length!==36||new Set(ids).size!==36||ids.some(id=>!cases.includes(id)))process.exit(1);console.log('36 unique catalog entries and demos validated')"
       - name: Verify static entry files
-        run: test -s index.html && test -s styles.css && test -s expansion-styles.css && test -s expansion-data.js && test -s expansion-demos.js && test -s expansion-controls.js && test -s more-data.js && test -s more-demos.js && test -s more-controls.js && test -s more-styles.css && test -s favicon.svg
+        run: test -s index.html && test -s styles.css && test -s expansion-styles.css && test -s expansion-data.js && test -s expansion-demos.js && test -s expansion-controls.js && test -s more-data.js && test -s more-demos.js && test -s more-controls.js && test -s more-styles.css && test -s corrections.js && test -s corrections.css && test -s favicon.svg
       - name: Install Chrome test driver
         run: npm install --no-save --no-audit --no-fund playwright-core@1.55.0
       - name: Smoke test in headless Chrome
         run: node tests/smoke.cjs
       - name: Audit animations and reduced motion
         run: node tests/audit-motion.cjs
+      - name: Regression test animation correctness
+        run: node tests/motion-regression.cjs
   deploy:
     needs: validate
     environment:
