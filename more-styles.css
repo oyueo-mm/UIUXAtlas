@@ -164,3 +164,17 @@
 @media(max-width:850px){.hero-cycle-controls{bottom:-32px;right:3px}.home-view .hero{margin-bottom:32px}}
 @media(max-width:680px){.more-demo{padding:5px;font-size:10px}.y-chartbars,.y-searchbox,.y-searchfilters,.y-split,.y-video{max-width:98%}.y-wave{font-size:15px}.y-linechart{width:150px}.y-bento{width:140px}.y-layout,.y-gallery{max-width:100%}.y-path{transform:scale(.8)}.hero-cycle-controls{right:0;bottom:-32px}}
 @media(prefers-reduced-motion:reduce){.more-demo *,.more-demo *:before,.more-demo *:after{animation-duration:.01ms!important;animation-iteration-count:1!important}.hero-card-enter{animation:none!important}}
+
+
+/* Motion audit refinements: these demos now portray the named behavior. */
+.y-timer-roll{display:inline-block;height:35px;line-height:35px;overflow:hidden;vertical-align:bottom}
+.y-timer-roll em{display:block;font-style:normal;line-height:35px}
+@keyframes y-countdown{0%,14%{transform:translateY(0)}30%,46%{transform:translateY(-35px)}59%,76%{transform:translateY(-70px)}100%{transform:translateY(-105px)}}
+.y-price-countdown .y-timer-roll em{animation:y-countdown 4s steps(1,end) infinite}
+.y-masonry-grid .y-masonry>div:nth-child(2) i.y-animate{animation:y-masonry-height 4.2s ease-in-out infinite}
+@keyframes y-masonry-height{0%,20%,100%{flex:2}42%,76%{flex:4}}
+.y-sticky-bottom-actions .y-sticky{position:relative;display:block;overflow:hidden}
+.y-sticky-bottom-actions .y-sticky-scroll{font-size:10px;line-height:1.4;color:#8b9aaa;animation:y-sticky-scroll 4.4s ease-in-out infinite}
+.y-sticky-bottom-actions .y-sticky>span{position:absolute;bottom:8px;left:8px;right:8px}
+@keyframes y-sticky-scroll{0%,17%,100%{transform:translateY(0)}42%,78%{transform:translateY(-73px)}}
+@media(prefers-reduced-motion:reduce){.y-timer-roll em{animation:none!important}.y-sticky-bottom-actions .y-sticky-scroll{transform:none!important}}
