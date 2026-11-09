@@ -331,3 +331,31 @@
 .z-responsive-priority .z-priority{animation:z-responsive-reduce 4.7s ease-in-out infinite}
 @media(max-width:129px){.within-demo{padding:3px}}
 @media(prefers-reduced-motion:reduce){.within-demo *, .within-demo *:before,.within-demo *:after{animation:none!important;transition:none!important}.within-demo .z-circle-cover{clip-path:circle(135% at 80% 70%)!important}.within-demo .z-card-peek-info,.within-demo .z-select-menu,.within-demo .z-child-dialog{opacity:1!important}}
+
+
+/* Accuracy fixes: percentages, file selections and status transitions. */
+@keyframes z-limit-progress{0%,15%,100%{width:0;background:#4c88ed}45%,77%{width:50%;background:#4c88ed}}
+.z-character-limit .z-limit-track i{animation:z-limit-progress 4.5s ease-in-out infinite}
+@keyframes z-stacked-correct{0%,14%,100%{width:0}42%,77%{width:var(--segment)}}
+.z-stacked-bar-split .z-stacked i:first-child{--segment:40%;animation:z-stacked-correct 4.5s ease-in-out infinite}
+.z-stacked-bar-split .z-stacked i:nth-child(2){--segment:35%;animation:z-stacked-correct 4.5s ease-in-out infinite}
+.z-stacked-bar-split .z-stacked i:nth-child(3){--segment:25%;animation:z-stacked-correct 4.5s ease-in-out infinite}
+.z-video-thumbnail-seek .z-seek-track>.z-seek-bubble{position:absolute;left:20%;top:auto;bottom:16px;transform:translateX(-50%);white-space:nowrap}
+.z-drag-multi-select .z-drag-grid>i:nth-child(3){animation:none}
+.z-drag-multi-select .z-drag-grid>i:nth-child(5){animation:z-select-tile 4.5s ease-in-out infinite}
+@keyframes z-autosave-edit{0%,23%{opacity:1}30%,100%{opacity:0}}
+@keyframes z-autosave-saving{0%,25%,100%{opacity:0}33%,55%{opacity:1}63%{opacity:0}}
+@keyframes z-autosave-done{0%,60%,100%{opacity:0}70%,93%{opacity:1}}
+.z-autosave-status .z-state-stack span:first-child{animation:z-autosave-edit 5s linear infinite}
+.z-autosave-status .z-state-stack span:nth-child(2){animation:z-autosave-saving 5s linear infinite}
+.z-autosave-status .z-state-stack span:last-child{animation:z-autosave-done 5s linear infinite}
+@keyframes z-network-dot{0%,22%,100%{color:#d9855e}42%,76%{color:#32a17b}}
+.z-offline-recovery .z-network-dot{animation:z-network-dot 4.7s ease-in-out infinite}
+.z-responsive-priority .z-priority{container-type:inline-size}
+@container(max-width:145px){.z-responsive-priority .z-priority small{display:none}}
+.within-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.within-controls label{display:flex;align-items:center;gap:6px;flex-wrap:wrap;color:#64758b;font-size:11px}
+.within-controls input[type=range]{accent-color:#4285ef;max-width:150px}
+.within-controls input:not([type=range]),.within-controls textarea,.within-controls select{border:1px solid #dce6f3;border-radius:6px;padding:7px;background:white;color:inherit;max-width:190px}
+.within-controls .demo-result{font-size:12px}
+@media(prefers-reduced-motion:reduce){.z-autosave-status .z-state-stack span:nth-child(1),.z-autosave-status .z-state-stack span:nth-child(2){opacity:0!important}.z-autosave-status .z-state-stack span:last-child{opacity:1!important}}
