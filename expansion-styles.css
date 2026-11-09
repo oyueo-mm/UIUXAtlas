@@ -368,3 +368,21 @@
 .exp-visible-label .x-label{animation:x-nod 4s ease-in-out infinite}
 /* respect accessibility preferences while leaving UI states identifiable */
 @media(prefers-reduced-motion:reduce){.exp-demo *,.exp-demo *:before,.exp-demo *:after{animation-duration:.01ms!important;animation-iteration-count:1!important}.exp-demo .x-motion{opacity:1}}
+
+
+/* Space-efficient catalog navigation and better interaction affordances. */
+.category-chips{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#d2dce9 transparent;padding-bottom:8px}
+.category-chips .chip{flex:none;white-space:nowrap}
+.exp-controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.exp-controls label{display:inline-flex;gap:6px;align-items:center;font-size:11px;color:#5f6d81}
+.exp-controls label input:not([type=checkbox]):not([type=radio]):not([type=range]),.exp-controls select{max-width:185px;min-width:90px}
+.exp-controls input[type=range]{width:125px;vertical-align:middle;accent-color:#3979f5}
+.exp-controls input[type=checkbox],.exp-controls input[type=radio]{accent-color:#3979f5}
+.exp-controls button[data-exp-action=rating]{min-width:44px;padding:9px}
+.pattern-card.is-offscreen .demo,.pattern-card.is-offscreen .demo *,.pattern-card.is-offscreen .demo *:before,.pattern-card.is-offscreen .demo *:after{animation-play-state:paused!important}
+.exp-selectable-card .x-selectcard{position:relative}
+@keyframes x-drawer-from-right{0%,16%,95%,100%{transform:translateX(102%)}35%,75%{transform:translateX(0)}}
+.exp-side-drawer .x-sidedrawer{animation:x-drawer-from-right 4.2s ease-in-out infinite}
+.exp-contrast-modes .x-contrast b,.exp-contrast-modes .x-contrast small{animation:x-contrast-foreground 4s ease-in-out infinite}
+@keyframes x-contrast-foreground{0%,20%,100%{color:#9da9b9}35%,76%{color:#fff}}
+@media(max-width:680px){.exp-controls{gap:7px}.exp-controls label input:not([type=checkbox]):not([type=radio]):not([type=range]){max-width:160px}.exp-demo{padding:5px;font-size:10px}.exp-demo .x-stack{width:min(150px,94%)}.exp-demo .x-input{height:30px;padding:0 6px}.exp-demo .x-table{width:150px;font-size:9px}.exp-demo .x-pages{gap:3px}.exp-demo .x-pages span{min-width:18px}.exp-demo .x-label,.exp-demo .x-caption{font-size:9px}}
