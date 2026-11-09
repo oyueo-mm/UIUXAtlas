@@ -36,6 +36,8 @@ jobs:
         run: node tests/audit-motion.cjs
       - name: Regression test animation correctness
         run: node tests/motion-regression.cjs
+      - name: Audit geometric accuracy of animated paths
+        run: node tests/geometry-audit.cjs
   deploy:
     needs: validate
     environment:
