@@ -1,0 +1,32 @@
+/* Motion correctness patch: values, positions and real interaction states agree. */
+.exp-range-slider .x-label b{display:none}
+@keyframes atlas-snap-align{0%,14%{transform:translateX(0)}28%,47%{transform:translateX(-169px)}61%,79%{transform:translateX(-338px)}93%,100%{transform:translateX(0)}}
+.exp-scroll-snap .x-snap-track{animation:atlas-snap-align 6s ease-in-out infinite}
+.exp-scroll-snap .x-snap-track i{flex:0 0 160px}
+@keyframes atlas-swap-a{0%,18%,100%{transform:translateY(0)}40%,78%{transform:translateY(36px)}}
+@keyframes atlas-swap-b{0%,18%,100%{transform:translateY(0)}40%,78%{transform:translateY(-36px)}}
+.exp-list-reorder .x-reorder{position:relative}
+.exp-list-reorder .x-reorder>div:first-child{animation:atlas-swap-a 4.2s ease-in-out infinite}
+.exp-list-reorder .x-reorder>div:nth-child(2){animation:atlas-swap-b 4.2s ease-in-out infinite}
+.exp-arrow-key-tabs .x-keytabs .x-motion{animation:x-glow 4s ease-in-out infinite}
+@keyframes atlas-before-clip{0%,15%,100%{clip-path:inset(0 0 0 20%)}43%,77%{clip-path:inset(0 0 0 100%)}}
+@keyframes atlas-before-handle{0%,15%,100%{left:20%}43%,77%{left:100%}}
+.y-before-after-slider .y-before-right{animation:atlas-before-clip 4.6s ease-in-out infinite}
+.y-before-after-slider .y-before-handle{animation:atlas-before-handle 4.6s ease-in-out infinite}
+@keyframes atlas-scrub-progress{0%,18%,100%{width:20%}45%,77%{width:83%}}
+@keyframes atlas-scrub-handle{0%,18%,100%{left:20%}45%,77%{left:83%}}
+.y-media-scrubber .y-timeline i{animation:atlas-scrub-progress 4s ease-in-out infinite}
+.y-media-scrubber .y-timeline b{animation:atlas-scrub-handle 4s ease-in-out infinite}
+@keyframes atlas-flip-first{0%,18%,100%{transform:translateX(0)}42%,76%{transform:translateX(45px)}}
+@keyframes atlas-flip-second{0%,18%,100%{transform:translateX(0)}42%,76%{transform:translateX(-45px)}}
+.y-flip-layout .y-gridmove i.y-animate{animation:atlas-flip-first 4.4s ease-in-out infinite}
+.y-flip-layout .y-gridmove i:nth-child(2){animation:atlas-flip-second 4.4s ease-in-out infinite}
+.demo-keyboard-tabs{display:flex;gap:5px;flex-wrap:wrap}
+.demo-keyboard-tabs button[aria-selected="true"]{background:#3d7ff0;color:#fff;border-color:#3d7ff0}
+.demo-keyboard-tabs button:focus-visible,.demo-skip-link:focus-visible{outline:3px solid #3d7ff0;outline-offset:3px}
+.demo-tab-panel,.demo-skip-target{font-size:12px;color:#61748a;margin:8px 0;padding:8px 10px;border-radius:7px;background:#f3f6fb}
+.demo-skip-link{font-size:12px;font-weight:750;color:#3776db;padding:9px 12px;background:#e9f2ff;border:1px solid #c5dafa;border-radius:8px}
+.demo-skip-target:focus{outline:3px solid #3d7ff0;outline-offset:2px}
+.motion-paused .exp-range-slider .x-fill,.motion-paused .exp-range-slider .x-knob{animation:none!important}
+.motion-paused .exp-scroll-snap .x-snap-track,.motion-paused .exp-list-reorder .x-reorder>div,.motion-paused .y-before-after-slider .y-before-right,.motion-paused .y-before-after-slider .y-before-handle,.motion-paused .y-media-scrubber .y-timeline i,.motion-paused .y-media-scrubber .y-timeline b,.motion-paused .y-flip-layout .y-gridmove i{animation:none!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){.exp-scroll-snap .x-snap-track,.exp-list-reorder .x-reorder>div,.y-before-after-slider .y-before-right,.y-before-after-slider .y-before-handle,.y-media-scrubber .y-timeline i,.y-media-scrubber .y-timeline b,.y-flip-layout .y-gridmove i{animation:none!important;transform:none!important}}
